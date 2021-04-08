@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Business.css';
 
 let business = {
@@ -18,26 +18,26 @@ class Business extends React.Component {
 
     render() {
 
-        return
+        return (
         <div className="Business">
             <div className="image-container">
-                <img src={Business.imageSrc} alt='' />
+                <img src={business.imageSrc} alt='' />
             </div>
-            <h2>{Business.name}</h2>
+            <h2>{business.name}</h2>
             <div className="Business-information">
-                <div class="Business-address">
-                    <p>{Business.address}</p>
-                    <p>{Business.city}</p>
-                    <p>{Business.state} {Business.zipCode}</p>
+                <div className ="Business-address">
+                    <p>{business.address}</p>
+                    <p>{business.city}</p>
+                    <p>{business.state} {Business.zipCode}</p>
                 </div>
                 <div className="Business-reviews">
-                    <h3>{Business.category}</h3>
-                    <h3 class="rating">{Business.rating}</h3>
-                    <p>{Business.reviewCount} reviews</p>
+                    <h3>{business.category}</h3>
+                    <h3 className ="rating">{Business.rating}</h3>
+                    <p>{business.reviewCount} reviews</p>
                 </div>
             </div>
         </div>
-        
+        )
 
     } // end of render
 
